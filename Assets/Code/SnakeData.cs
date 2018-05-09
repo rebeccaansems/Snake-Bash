@@ -27,7 +27,7 @@ public class SnakeData : MonoBehaviour
         }
     }
 
-    private void AddOrb()
+    public void AddOrb()
     {
         var newOrb = Instantiate(OrbPrefab, this.transform);
         newOrb.transform.position = new Vector2(AllOrbs[currNumOrbs - 1].transform.position.x, AllOrbs[currNumOrbs - 1].transform.position.y);
@@ -35,7 +35,7 @@ public class SnakeData : MonoBehaviour
         AllOrbs.Add(newOrb);
     }
 
-    private void RemoveOrb()
+    public void RemoveOrb()
     {
         Destroy(AllOrbs[currNumOrbs - 1].gameObject);
         AllOrbs.RemoveAt(currNumOrbs - 1);
