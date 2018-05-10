@@ -146,6 +146,9 @@ MonoBehaviour:
   OrbCounter: {fileID: 1274339543}
   AllOrbs: []
   OrbPrefab: {fileID: 1244247763798246, guid: 9b0e1a6e2d2a0c34f92b69edb8e79ff8, type: 2}
+  MainOrbPrefab: {fileID: 1351532975044524, guid: 50b57cd9c351eb94d920b2e74c60d4c5,
+    type: 2}
+  LocalSnakeHead: {fileID: 927000726}
 --- !u!114 &33535742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,14 +279,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 4290097100066386, guid: 49399970999a2ca4f922a66feae1abdd, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4290097100066386, guid: 49399970999a2ca4f922a66feae1abdd, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 114915451599102092, guid: 49399970999a2ca4f922a66feae1abdd,
         type: 2}
       propertyPath: OrbsRequired
@@ -365,6 +360,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &594858943
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4021927034425496, guid: 8eebd523a0cb062448db1a115f39ec14, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021927034425496, guid: 8eebd523a0cb062448db1a115f39ec14, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021927034425496, guid: 8eebd523a0cb062448db1a115f39ec14, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021927034425496, guid: 8eebd523a0cb062448db1a115f39ec14, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021927034425496, guid: 8eebd523a0cb062448db1a115f39ec14, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021927034425496, guid: 8eebd523a0cb062448db1a115f39ec14, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021927034425496, guid: 8eebd523a0cb062448db1a115f39ec14, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021927034425496, guid: 8eebd523a0cb062448db1a115f39ec14, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021927034425496, guid: 8eebd523a0cb062448db1a115f39ec14, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021927034425496, guid: 8eebd523a0cb062448db1a115f39ec14, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253751292951642, guid: 8eebd523a0cb062448db1a115f39ec14, type: 2}
+      propertyPath: m_Name
+      value: Orb Box (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8eebd523a0cb062448db1a115f39ec14, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &927000726 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1107153942558006, guid: e37d3444da1e5df4f855ef6e78c618b3,

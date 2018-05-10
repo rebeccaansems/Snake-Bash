@@ -8,7 +8,7 @@ public class SnakeData : MonoBehaviour
 {
     public Text OrbCounter;
     public List<GameObject> AllOrbs;
-    public GameObject OrbPrefab;
+    public GameObject OrbPrefab, MainOrbPrefab, LocalSnakeHead;
 
     private int currNumOrbs, maxNumOrbs;
 
@@ -26,10 +26,19 @@ public class SnakeData : MonoBehaviour
 
     public void AddOrb()
     {
-        var newOrb = Instantiate(OrbPrefab, this.transform);
-        newOrb.transform.position = new Vector2(AllOrbs[AllOrbs.Count - 1].transform.position.x, AllOrbs[AllOrbs.Count - 1].transform.position.y);
-        newOrb.GetComponent<HingeJoint2D>().connectedBody = AllOrbs[AllOrbs.Count - 1].GetComponent<Rigidbody2D>();
+        GameObject newOrb;
+        if (AllOrbs.Count == 0)
+        {
+            newOrb = Instantiate(MainOrbPrefab, this.transform);
+            newOrb.GetComponent<HingeJoint2D>().connectedBody = LocalSnakeHead.GetComponent<Rigidbody2D>();
+        }
+        else
+        {
+            newOrb = Instantiate(OrbPrefab, this.transform);
+            newOrb.GetComponent<HingeJoint2D>().connectedBody = AllOrbs[AllOrbs.Count - 1].GetComponent<Rigidbody2D>();
+        }
         AllOrbs.Add(newOrb);
+        newOrb.transform.position = new Vector2(AllOrbs[AllOrbs.Count - 1].transform.position.x, AllOrbs[AllOrbs.Count - 1].transform.position.y);
 
         UpdateText();
     }
