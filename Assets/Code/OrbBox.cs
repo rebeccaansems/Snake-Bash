@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OrbBox : MonoBehaviour
+public class OrbBox : Box
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,6 +15,6 @@ public class OrbBox : MonoBehaviour
     private void GainNewOrb(GameObject parent)
     {
         parent.GetComponent<SnakeData>().AddOrb();
-        Destroy(this.gameObject);
+        StartCoroutine(DestroyObject());
     }
 }

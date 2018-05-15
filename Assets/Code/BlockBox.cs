@@ -3,16 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BlockBox : MonoBehaviour
+public class BlockBox : Box
 {
-    public int OrbsRequired = 1;
-
-    public Text OrbsRequiredText;
-
-    private void Start()
-    {
-        OrbsRequiredText.text = OrbsRequired.ToString();
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,10 +16,10 @@ public class BlockBox : MonoBehaviour
 
     private void LoseOrb(GameObject parent)
     {
-        for (int i = 0; i < OrbsRequired; i++)
+        for (int i = 0; i < NumberOrbs; i++)
         {
             parent.GetComponent<SnakeData>().RemoveOrb();
         }
-        Destroy(this.gameObject);
+        StartCoroutine(DestroyObject());
     }
 }
