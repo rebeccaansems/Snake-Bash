@@ -215,9 +215,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f6e819b4b9e3f4883dc6b90d627745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ParticleSys: {fileID: 198473883031608078}
   NumberOrbs: 1
   NumberOrbsRequiredText: {fileID: 114026244429991362}
-  ParticleSys: {fileID: 198473883031608078}
 --- !u!198 &198473883031608078
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -4797,9 +4797,9 @@ ParticleSystemRenderer:
   m_NormalDirection: 1
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
+  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1
-  m_VertexStreams: 00010304
+  m_VertexStreams: 000304
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}

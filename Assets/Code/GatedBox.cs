@@ -3,8 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BlockBox : Box
+public class GatedBox : Box
 {
+    public int NumberOrbs = 1;
+
+    public Text NumberOrbsRequiredText;
+
+    private void Start()
+    {
+        NumberOrbsRequiredText.text = NumberOrbs.ToString();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
