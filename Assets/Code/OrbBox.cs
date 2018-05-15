@@ -15,6 +15,6 @@ public class OrbBox : Box
     private void GainNewOrb(GameObject parent)
     {
         parent.GetComponent<SnakeData>().AddOrb();
-        StartCoroutine(DestroyObject());
+        StartCoroutine(DestroyObjectWithParticles());
     }
 }

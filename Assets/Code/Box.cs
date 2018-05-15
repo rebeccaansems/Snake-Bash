@@ -15,7 +15,7 @@ public class Box : MonoBehaviour
         NumberOrbsRequiredText.text = NumberOrbs.ToString();
     }
 
-    protected IEnumerator DestroyObject()
+    protected IEnumerator DestroyObjectWithParticles()
     {
         ParticleSys.Play();
         DestroyEverythingExceptParticles();

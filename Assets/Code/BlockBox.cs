@@ -20,6 +20,6 @@ public class BlockBox : Box
         {
             parent.GetComponent<SnakeData>().RemoveOrb();
         }
-        StartCoroutine(DestroyObject());
+        StartCoroutine(DestroyObjectWithParticles());
     }
 }

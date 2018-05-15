@@ -45,9 +45,23 @@ public class SnakeData : MonoBehaviour
 
     public void RemoveOrb()
     {
-        Destroy(AllOrbs[AllOrbs.Count - 1].gameObject);
+        StartCoroutine(DestroyObjectWithParticles(AllOrbs[AllOrbs.Count - 1].gameObject));
         AllOrbs.RemoveAt(AllOrbs.Count - 1);
 
         UpdateText();
+    }
+    
+    private IEnumerator DestroyObjectWithParticles(GameObject obj)
+    {
+        obj.GetComponentInChildren<ParticleSystem>().Play();
+        DestroyEverythingExceptParticles(obj);
+        yield return new WaitForSeconds(obj.GetComponentInChildren<ParticleSystem>().main.duration * 10);
+        Destroy(obj);
+    }
+
+    private void DestroyEverythingExceptParticles(GameObject obj)
+    {
+        Destroy(obj.GetComponent<SpriteRenderer>());
+        Destroy(obj.GetComponent<CircleCollider2D>());
     }
 }
