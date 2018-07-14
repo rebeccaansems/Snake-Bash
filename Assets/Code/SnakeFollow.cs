@@ -28,8 +28,10 @@ public class SnakeFollow : MonoBehaviour
 
     void Update()
     {
-        mousePosition = new Vector2(Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, cameraRect.xMin + snakeHeadSize.x / 2, cameraRect.xMax - snakeHeadSize.x / 2),
-            Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).y + snakeHeadSize.y * 1.5f, cameraRect.yMin + snakeHeadSize.y / 2, cameraRect.yMax - snakeHeadSize.y / 2 - 5));
+        mousePosition = new Vector2(Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, 
+            cameraRect.xMin + snakeHeadSize.x / 2, cameraRect.xMax - snakeHeadSize.x / 2),
+            Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).y + snakeHeadSize.y * 1.5f, 
+            cameraRect.yMin + snakeHeadSize.y / 2, cameraRect.yMax - snakeHeadSize.y / 2));
         SnakeHead.transform.position = Vector2.Lerp(SnakeHead.transform.position, mousePosition, MoveSpeed);
     }
 }
