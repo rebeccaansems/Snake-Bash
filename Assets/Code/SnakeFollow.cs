@@ -31,6 +31,7 @@ public class SnakeFollow : MonoBehaviour
     {
         mousePosition = new Vector2(Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
             cameraRect.xMin + snakeHeadSize.x / 2, cameraRect.xMax - snakeHeadSize.x / 2),
+            Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).y + snakeHeadSize.y * 1.5f,
             cameraRect.yMin + snakeHeadSize.y / 2, cameraRect.yMax - snakeHeadSize.y / 2));
 
         Collider2D blockBox = ObjectBetweenTwoPoints(mousePosition, SnakeHead.transform.position, snakeHeadSize.x/3f, "Block");
